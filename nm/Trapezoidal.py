@@ -6,7 +6,7 @@ def trap(lower, upper, iterations, eq):
     h = float((upper-lower)/iterations)
     res = f(eq, upper) + f(eq, lower)
     for i in range(1,iterations):
-        x = lower + i + h
+        x = lower + i * h
         res += 2*f(eq,x)
         return ((float(h)/2) * res)
 
